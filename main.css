@@ -1,0 +1,314 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Open Sans', 'Source Sans Pro', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  background: DimGray;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+html:after {
+  content: '';
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,.4);
+  z-index: 0;
+}
+body {
+  margin: 0;
+  position: relative;
+  z-index: 50;
+}
+main {
+  margin: 0 auto 50px auto;
+  max-width: 750px;
+  background: rgba(255,255,255,.7);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color .2s ease-in-out;
+}
+a:hover,
+a:focus {
+  color: #f60;
+}
+@media (min-width: 750px) {
+  main {
+    margin-top: 50px;
+  }
+}
+
+/* Header Styles */
+header {
+  background: white;
+  text-align: center;
+  font-size: 16pt;
+  font-weight: 600;
+  color: #999;
+  padding: .75em .75em .5em .75em;
+}
+header img {
+  display: block;
+  width: auto;
+  max-width: 125px;
+  margin: 0 auto;
+}
+header span {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  letter-spacing: -.03em;
+}
+.lock {
+  display: block;
+  width: 20px;
+  height: 14px;
+  position: absolute;
+  top: ;
+  left: 0;
+  background: #999;
+  border-radius: 2px;
+  margin-top: 10px;
+}
+.lock:before,
+.lock:after,
+.lock i:before,
+.lock i:after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+.lock:before,
+.lock i:before {
+  background: #999;
+}
+.lock:after,
+.lock i:after {
+  background: white;
+}
+.lock:before {
+  width: 14px;
+  height: 7px;
+  top: -5px;
+  left: 50%;
+  margin-left: -7px;
+}
+.lock:after {
+  width: 8px;
+  height: 3px;
+  top: -3px;
+  left: 50%;
+  margin-left: -4px;
+}
+.lock i:before {
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  top: -10px;
+  left: 50%;
+  margin-left: -7px;
+}
+.lock i:after {
+  width: 8px;
+  height: 7px;
+  border-radius: 100%;
+  top: -7px;
+  left: 50%;
+  margin-left: -4px;
+  z-index: 750;
+}
+@media (min-width: 375px) {
+  header {
+    text-align: right;
+  }
+  header:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  header img {
+    float: left;
+  }
+}
+
+/* Form Styles */
+h2 {
+  color: white;
+  background: #44b4c0;
+  margin: 0;
+  font-size: 16pt;
+  font-weight: 400;
+  letter-spacing: -.02em;
+  padding: .75em;
+}
+form {
+  overflow: hidden;
+}
+div {
+  padding: .75em;
+  position: relative;
+}
+label {
+  font-size: 11pt;
+  font-weight: 600;
+  color: black;
+  display: block;
+  margin-bottom: .5em;
+}
+
+input[type="checkbox"]{
+  margin: 20px;
+}
+
+input[type="radio"]{
+  font-size: 24pt;
+}
+input[type="text"],
+\
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  margin: 0;
+  padding: .5em;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #999;
+  border-radius: 3px;
+  font-weight: 400;
+  font-family: 'Lato', 'Source Sans Pro', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  font-size: 14pt;
+  cursor: pointer;
+}
+input + input,
+input + select,
+select + input,
+select + select {
+  margin-top: .5em;
+}
+input:hover,
+input:focus,
+select:hover,
+select:focus {
+  border-color: orange;
+}
+select {
+  text-indent: 0.01px;
+  text-overflow: '';
+  background-repeat: no-repeat;
+  background-position: calc(100% - .5em) 50%;
+  background-size: 12px;
+ 
+}
+select::-ms-expand {
+  display: none;
+}
+input[type=submit] {
+  display: block;
+  margin: .5em .5em 1em .5em;
+  padding: .5em .25em;
+  width: calc(100% - 1em);
+  position: relative;
+  border-radius: 5px;
+  background: #ff8900; 
+  background: -moz-linear-gradient(top, #ff8900 0%, #ff3d00 100%); 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff8900), color-stop(100%,#ff3d00)) ; 
+  background: -webkit-linear-gradient(top, #ff8900 0%,#ff3d00 100%); 
+  background: -o-linear-gradient(top, #ff8900 0%,#ff3d00 100%); 
+  background: -ms-linear-gradient(top, #ff8900 0%,#ff3d00 100%); 
+  background: linear-gradient(to bottom, #ff8900 0%,#ff3d00 100%); 
+  border: none;
+  text-transform: uppercase;
+  font-size: 18pt;
+  color: #fff;
+  font-weight: 700;
+  white-space: normal;
+  border-top: 1px solid #ff8900;
+  text-shadow: rgba(0,0,0,.3) 2px 2px 2px;
+  font-family: 'Open Sans Condensed';
+}
+input[type=submit]:hover:after,
+input[type=submit]:focus:after {
+  border-top: 1px solid #ff9a01;
+}
+input[type=submit]:hover,
+input[type=submit]:focus {
+  border-top: 1px solid #ffd28a;
+  background: #000; /
+  background: #FFA133; 
+  background: -moz-linear-gradient(top, #FFA133 0%, #ff3d00 100%); 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFA133), color-stop(100%,#ff3d00)) ; 
+  background: -webkit-linear-gradient(top, #FFA133 0%,#ff3d00 100%); 
+  background: -o-linear-gradient(top, #FFA133 0%,#ff3d00 100%); 
+  background: -ms-linear-gradient(top, #FFA133 0%,#ff3d00 100%); 
+  background: linear-gradient(to bottom, #FFA133 0%,#ff3d00 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFA133', endColorstr='#ff3d00',GradientType=0 ); 
+  box-shadow: inset #ffb644 0 1px 0, #fb5c13 0 0 30px;
+}
+input[type=submit]:active,
+input[type=submit]:active {
+  background: #f50;
+  border: 1px solid #f00;
+}
+@media (min-width: 35px) {
+  input[type=submit] {
+    width: 100%;
+    margin: .5em auto 1em auto;
+    max-width: 300px;
+  }
+  .split:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .split select {
+    float: left;
+    width: calc(30% - .25em);
+  }
+  .split select + select {
+    margin-top: 0;
+    margin-left: .5em;
+  }
+}
+@media (min-width: 750px) {
+  main {
+    margin: 50px auto;
+  }
+  div {
+    padding: 1em 1em 1em 100px;
+  }
+  label {
+    width: auto;
+    position: absolute;
+    top: 1.4em;
+    left: 1em;
+  }
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  color: ;
+  font-size: 18pt;
+
+
+}
